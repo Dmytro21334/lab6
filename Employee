@@ -1,14 +1,11 @@
 public class Employee {
     private String name;
     private double salary;
-
-    // Конструктор
     public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
     }
 
-    // Геттери для ім'я та зарплати
     public String getName() {
         return name;
     }
@@ -17,7 +14,6 @@ public class Employee {
         return salary;
     }
 
-    // Метод для перевірки зарплати та викидання винятку
     public void checkSalary() throws EmployeeSalaryException {
         if (salary > 100000) {
             throw new EmployeeSalaryException("Salary too high for " + name + ": " + salary);
