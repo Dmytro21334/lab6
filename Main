@@ -5,25 +5,20 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Запитуємо ім'я та зарплату працівника
         System.out.print("Enter employee's name: ");
         String name = scanner.nextLine();
 
         System.out.print("Enter " + name + "'s salary: ");
         double salary = scanner.nextDouble();
 
-        // Створюємо об'єкт працівника
         Employee employee = new Employee(name, salary);
 
-        // Перевіряємо зарплату і обробляємо можливий виняток
         try {
             employee.checkSalary();  // Перевіряємо, чи зарплата не перевищує межу
             System.out.println("Employee " + name + " has a valid salary: " + salary);
         } catch (EmployeeSalaryException e) {
-            // Обробляємо виняток
             System.out.println("Error: " + e.getMessage());
         } finally {
-            // Закриваємо сканер
             scanner.close();
         }
     }
