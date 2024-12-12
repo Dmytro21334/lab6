@@ -1,6 +1,4 @@
-// Власний клас винятку для зарплати працівника
 public class EmployeeSalaryException extends Exception {
-    // Конструктор, що приймає повідомлення
     public EmployeeSalaryException(String message) {
         super(message);
     }
